@@ -1,8 +1,40 @@
 $(function(){
 
-	$('#submitmsg').click(clickEnvio);
+var objFirebase = new Firebase("https://chatwilmer.firebaseio.com/");
 
-var objFierebase = new Firebase("https://chatucc.firebaseio.com/");
+	$('#enviar').click(clickEnvio);
+	$('#login').click(clickAutenticarTwitter);
+	$('#login2').click(clickAutenticarFB);
+
+
+
+	function clickAutenticarTwitter()
+	{
+
+		objFirebase.authWithOAuthPopup("twitter",function(error, authData){
+
+			if (error) {
+				console.log("Login Failed", error);
+			}else{
+				console.log("Exito!!!", authData);
+			}
+		});
+	}
+function clickAutenticarFB()
+{
+	objFirebase.authWithOAuthPopup("Facebook", function(error, authData){
+
+	if(error){
+		console.log("Login Failed", error);
+
+	}else{
+		console.log("Exitos!!!", authData);
+	}
+
+	});
+
+}
+
 
 	function clickEnvio(){
 
@@ -19,7 +51,7 @@ var objFierebase = new Firebase("https://chatucc.firebaseio.com/");
 
 	}
 
-	objFierebase.on("child_added", function(data){
+	objFirebase.on("child_added", function(data){
 		var registro = data.val();
 		var plantilla = getPlantilla(registro.autor, registro.mensaje);
 
