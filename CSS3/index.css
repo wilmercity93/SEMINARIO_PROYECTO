@@ -1,0 +1,12 @@
+body{background:#c0c0c0;font-family:Arial;font-sze:14px;}body footer{background:#008000;font-family:Arial;font-sze:16px;}body footer padding 0.8em 0 h3{font-size:14px}body header{background:#600000;margin-top:5;width:100%;height:200px;overflow:hidden;position:relative;}body header .header-logo{padding:1em;width:100px;float:right;}body header img{border-right:2px solid whilte;height:70px;padding:.8px;width:80px;}body header img .header-titulo{font-sze:16px;margin:50px 0 0 200px;float:right;}body header img .header-titulo .header-avatar{position:absolute;float:left;}body header img .header-titulo .header-avatar img{border-radius:60%;width:70px;;}nav{background:#000;border-left:20px solid whilte;}nav .menu-ppal{height:70px; margin:0;margin:0;padding:0;list-style:none;}nav .menu-ppal li{dislay:inline-block;list-style-type:none;display: inline;}nav .menu-ppal li a{color:whilte;dislay:inline-block;padding:0 1em;text-decoration:none;list-style-type:none;}nav .menu-ppal li a:hover{background:rgba(0,0,0,0.1);list-style-type:none;}
+nav {
+	text-align: center;
+	}
+	footer{
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+	}
+	
